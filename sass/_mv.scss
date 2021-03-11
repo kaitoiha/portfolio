@@ -1,0 +1,58 @@
+.mv {
+  margin-top: 100px;
+  width: 100%;
+  background: transparent url(../img/umi.JPG) no-repeat top center / cover;
+  background-color: rgba(255,255,255,0.1);
+  background-blend-mode: lighten;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  @include mq("sp") {
+    margin-top: 50px;
+    height: 500px;
+  }
+  .mv-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    line-height: 1.2;
+    color: #fff;
+    .mv-ttl{
+      text-shadow: -4px -4px 1px #808080;
+      font-size: 80px;
+      font-weight: 700;
+    }
+    p{
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+  }
+}
+.button-item{
+  margin-top: 30px;
+}
+.button03{
+  display: inline-block;
+	min-width: 230px;
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: none;
+	margin: 0;
+	padding: 15px 16px;
+	border: 2px solid #fff;
+	color: #fff;
+	border-radius: 3px;
+  &:hover{
+    background-color: #fff;
+    color: black;
+  }
+  &:active{
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+  }
+}

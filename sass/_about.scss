@@ -1,0 +1,90 @@
+.about {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  .inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include mq("tab") {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    .about-img {
+      box-sizing: border-box;
+      border: 2px solid rgb(230, 221, 221);
+      border-radius: 7px;
+      img {
+        border-radius: 7px;
+        width: 460px;
+        height: 540px;
+        object-fit: cover;
+        margin: 3px;
+        @include mq("tab") {
+          width: 460px;
+          height: 320px;
+        }
+      }
+    }
+    .about-me {
+      width: 50%;
+      text-align: left;
+      line-height: 1.7;
+      @include mq("tab") {
+          width: 100%;
+          padding: 0 20px;
+        }
+      h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 36px;
+        span {
+          color: $blue;
+        }
+        @include mq('tab'){
+          margin-top: 20px;
+          text-align: center;
+        }
+      }
+      .name {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 36px;
+        color: black;
+        @include mq('tab'){
+          text-align: center;
+        }
+      }
+      p {
+        font-size: 18px;
+        margin-bottom: 26px;
+        color: $gray;
+        @include mq('tab'){
+          width: 100%;
+        }
+      }
+      .sns {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        a {
+          text-decoration: none;
+        }
+        .fab {
+          font-size: 40px;
+          display: inline-block;
+          margin-right: 20px;
+        }
+        .fa-twitter-square {
+          color: #00acee;
+          text-align: right;
+          display: block;
+        }
+        .fa-facebook-square {
+          color: #305097;
+          display: block;
+        }
+      }
+    }
+  }
+}

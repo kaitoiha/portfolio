@@ -1,0 +1,50 @@
+.header{
+  background-color: $color-main;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: map-get($layer, 'header');
+  height: 100px;
+@include mq('sp'){
+  height: 50px;
+}
+  .inner{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  ul{
+    display: flex;
+    align-items: center;
+    li{
+      margin-right: 28px;
+      &:last-child{
+        margin-right: 0px;
+      }
+      a{
+        text-decoration: none;
+          color: $color-background-base;
+          font-size: 16px;
+          font-family: $font-family-base;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 2px;
+            background: $color-active;
+            opacity: 0;
+          }
+          &:hover::after{
+            opacity: 1;
+          }
+      }
+    }
+    @include mq('sp'){
+      display: none;
+    }
+  }
+}

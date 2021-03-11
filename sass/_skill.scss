@@ -1,0 +1,50 @@
+.skill{
+  background: transparent url(../img/code.jpg) no-repeat top center / cover;
+  .section-ttl{
+    color: #fff;
+  }
+.skills{
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  @include mq('sp'){
+    flex-direction: column;
+    align-items: center;
+  }
+  .skill-content{
+    color: #fff;
+    text-align: center;
+    width: calc((100% - 40px)/3);
+    margin-right: 20px;
+    vertical-align: top;
+    &:last-child{
+      margin-right: 0px;
+    }
+    @include mq('sp'){
+      width: 100%;
+    margin-bottom: 30px;
+  }
+    h3{
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+    i{
+      font-size: 60px;
+      margin-bottom: 30px;
+    }
+    p{
+      font-size: 16px;
+      line-height: 1.7;
+    }
+  }
+}
+}
+.fa-code{
+  color: red;
+}
+.fa-js-square{
+  color: #e9d44c;
+}
+.fa-wordpress{
+  color: #207195;
+}

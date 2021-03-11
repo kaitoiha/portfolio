@@ -1,0 +1,149 @@
+// ハンバーガーアイコン
+$drawer-bar-space: 4px;
+$drawer-bar-width: 22px;
+$drawer-bar-height: 4px;
+$drawer-content-width: 200px;
+
+// -----
+// ドロワー
+// -----
+.drawer-icon {
+	display: none;
+	position: fixed;
+	right: 100px;
+	top: 15px;
+	z-index: map-get($layer, "drawer") + 1;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.5s ease 0s;
+	background: transparent;
+	box-shadow: none;
+	border: none;
+	padding: 0;
+
+	&.is-checked {
+		transform: translateX(-$drawer-content-width);
+	}
+
+	@include mq('sp') {
+		display: block;
+	}
+}
+
+.drawer-bars {
+	display: inline-block;
+	width: $drawer-bar-width;
+	height: $drawer-bar-height + ($drawer-bar-space + $drawer-bar-height) * 2;
+	position: relative;
+	vertical-align: bottom;
+}
+
+.drawer-bar {
+	position: absolute;
+	right: 0;
+	left: 0;
+	display: block;
+	background: #fff;
+	width: 100%;
+	height: $drawer-bar-height;
+	border-radius: 0;
+	transition: all 0.3s linear 0s;
+
+	&:nth-of-type(1) {
+		top: 0;
+	}
+
+	&:nth-of-type(2) {
+		top: $drawer-bar-space + $drawer-bar-height;
+	}
+
+	&:nth-of-type(3) {
+		top: ($drawer-bar-space + $drawer-bar-height) * 2;
+	}
+
+	.is-checked & {
+		&:nth-of-type(1) {
+			top: 10px;
+			transform: rotate(-45deg);
+		}
+
+		&:nth-of-type(2) {
+			background: transparent;
+		}
+
+		&:nth-of-type(3) {
+			top: 10px;
+			transform: rotate(45deg);
+		}
+	}
+}
+
+.drawer-background {
+	display: none;
+	position: fixed;
+	z-index: map-get($layer, "drawer") - 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0;
+	transition: all 0.5s ease 0s;
+
+	&.is-checked {
+		display: block;
+		opacity: 0.8;
+	}
+}
+
+.drawer-content {
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: auto;
+	left: auto;
+	transform: translateX(105%);
+	z-index: map-get($layer, "drawer");
+	width: $drawer-content-width;
+	max-width: 90%;
+	height: 100%;
+	background: #fff;
+	transition: all 0.5s ease 0s;
+	text-align: left;
+	color: #707070;
+
+	&.is-checked {
+		transform: translateX(0);
+		box-shadow: 6px 0 25px rgba(#000, 0.16);
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			border-bottom: 1px dotted #707070;
+
+			a {
+				text-decoration: none;
+				display: block;
+				position: relative;
+				padding: 16px 30px 14px 20px;
+				color: #707070;
+
+				&::after {
+					content: "";
+					position: absolute;
+					right: 20px;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 7px;
+					height: 11px;
+					background: transparent url(../img/drawer-arrow-right.png) no-repeat center center / contain;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+.totop {
+  position: fixed;
+  z-index: 1;
+  right: 24px;
+  bottom: 24px;
+  @include mq("tab") {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  @include mq("sp") {
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+.footer {
+  background: transparent linear-gradient(180deg, #666666 0%, #333333 100%) 0%
+    0% no-repeat padding-box;
+  padding: 40px;
+}
+.footer-sns {
+  margin-bottom: 20px;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .fab{
+      font-size: 40px;
+      color: #305097;
+    }
+    .fa-twitter-square{
+      color: #00acee;
+      margin-right: 40px;
+    }
+  }
+}
+.footer-copy {
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+}
