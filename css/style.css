@@ -319,6 +319,7 @@ a:hover {
   margin-top: 100px;
   width: 100%;
   background: transparent url(../img/umi.JPG) no-repeat top center/cover;
+  background-attachment: fixed;
   background-color: rgba(255, 255, 255, 0.1);
   background-blend-mode: lighten;
   height: 600px;
@@ -606,6 +607,7 @@ a:hover {
 
 .skill {
   background: transparent url(../img/code.jpg) no-repeat top center/cover;
+  background-attachment: fixed;
 }
 
 .skill .section-ttl {
