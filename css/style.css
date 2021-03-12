@@ -87,13 +87,15 @@ a:hover {
         import
 ============================*/
 .header {
-  background-color: #3f51b5;
+  background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 20;
   height: 100px;
+  -webkit-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 767px) {
@@ -133,7 +135,7 @@ a:hover {
 
 .header ul li a {
   text-decoration: none;
-  color: #fff;
+  color: #3f51b5;
   font-size: 16px;
   font-family: "游ゴシック体", "Yu Gothic", yugothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
   position: relative;
@@ -201,7 +203,7 @@ a:hover {
   right: 0;
   left: 0;
   display: block;
-  background: #fff;
+  background: #3f51b5;
   width: 100%;
   height: 4px;
   border-radius: 0;
